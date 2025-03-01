@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Ajout de Font Awesome -->
+    <title>Barre d'Alerte</title>
+    <style>
+#acceuil{
+    margin-top: -34px;
+}
+        #Logo{
+width: 100px;
+height: 50px;
+margin-left:30px ;
+        }
+        .hidden {
+            display: none;
+        }
+        .fade {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .fade.show {
+            opacity: 1;
+        }
+
+        .bg-custom-green {
+            background-color: #2F6B3A;
+        }
+        .text-custom-green {
+            color: #2F6B3A;
+        }
+
+        .bg-whitee {
+            background-color: #ffffff;
+        }
+        .bg2-custom-green {
+            background-color: #D0EBCA;
+        }
+
+        #footer{
+            margin-bottom: -80px;
+            display: flex;
+        }
+
+
+        @media (max-width: 768px) { /* Adjust the breakpoint as needed */
+        .hidden-mobile {
+            display: none;
+        }
+    }
+
+
+        
+    </style>
+</head>
+<body class="bg-white-800 text-white">
+  
+
+    <div class="relative flex flex-col md:flex-row justify-center items-center p-4 bg-custom-green">
+        <span class="text-xl font-bold mr-2">🔥 FLASH SALE - 40% SUR TOUT</span>
+        <span class="font-semibold mr-4">CODE : FLASH40</span>
+        <span>⏳ FIN DANS : 23:30:59</span>
+        <span class="absolute top-2 right-2 text-white text-2xl mr-4"><i class="fas fa-shopping-cart"></i></span>
+    </div>
+    
+    <nav class="bg-white-800 p-4">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between">
+                <img src="logo.png" id="Logo" alt="Logo" class="h-8 mb-4 md:mb-0">
+                <div id="nav-links" class="md:flex flex-row justify-end space-x-4 hidden-mobile mr-8">
+                    <a href="#" class="bg-custom-green text-white hover:underline py-10 px-4" id="acceuil">ACCUEIL</a>
+                    <a href="/src/AboutUs.html" class="text-custom-green hover:underline py-2 px-4">À PROPOS</a>
+                    <a href="#" class="text-custom-green hover:underline py-2 px-4">PERSONNALISATION</a>
+                    <a href="/src/Essayage.html" class="text-custom-green hover:underline py-2 px-4">ESSAYAGE</a>
+                    <a href="#" class="text-custom-green hover:underline py-2 px-4">GUIDE D'UTILISATION</a>
+                    <a href="#" class="text-custom-green hover:underline py-2 px-4">LANGUE +</a>
+                </div>
+    
+                <!-- Hamburger Icon -->
+                <button id="hamburger" class="md:hidden flex items-center focus:outline-none">
+                    <svg class="w-6 h-6 text-custom-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                   <!-- User Icon -->
+                   <a href="profil.html" class="absolute top-20 right-4 text-custom-green text-2xl">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Sidebar Menu -->
+    <div id="sidebar" class="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 hidden">
+        <div class="flex flex-col justify-start p-4 bg-white w-64 h-full">
+            <button id="close-sidebar" class="self-end text-gray-600">
+                &times; <!-- Close icon -->
+            </button>
+            <a href="#"  class="block text-custom-green hover:underline py-2">ACCUEIL</a>
+            <a href="/AboutUs.html" class="block text-custom-green hover:underline py-2">À PROPOS</a>
+            <a href="#" class="block text-custom-green hover:underline py-2">PERSONNALISATION</a>
+            <a href="#" class="block text-custom-green hover:underline py-2">ESSAYAGE</a>
+            <a href="#" class="block text-custom-green hover:underline py-2">GUIDE D'UTILISATION</a>
+            <a href="#" class="block text-custom-green hover:underline py-2">LANGUE</a>
+        </div>
+    </div>
+    
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const closeSidebar = document.getElementById('close-sidebar');
+    
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden');
+        });
+    
+        closeSidebar.addEventListener('click', () => {
+            sidebar.classList.add('hidden');
+        });
+    </script>
+
+
+
+
+
+   
+
+
+
+
+
+
+
+    <div class="container mx-auto px-16 py-4">
+        <div class="flex flex-col md:flex-row items-center md:space-x-8">
+            <div class="md:w-1/2 p-4">
+                <h2 class="text-lg font-lg text-gray-600 mb-2 uppercase">Crée ton style avec des lunettes uniques</h2>
+                <h1 class="text-6xl font-extrabold text-custom-green mb-4">TROUVE TON <br> STYLE<br>TESTE VIRTUELLEMENT</h1>
+                <p class="text-gray-500 mb-6">Bienvenue dans notre univers. Trouve la monture parfaite, adaptée à ton style et essaie-la virtuellement en quelques clics.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="bg-custom-green text-white py-3 px-6 hover:bg-custom-green transition duration-200">PROCÉDER À L'ESSAYAGE</a>
+                    <a href="#" class="bg-transparent border-2 border-green-800 text-custom-green text-custom-green py-3 px-6 hover:bg-custom-green hover:text-white transition duration-200">À PROPOS DE NOUS</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 p-4 flex justify-end">
+                <div class="border-8 border-green-800 p-2">
+                    <img class="h-80" src="hero.gif" alt="Modèle de lunettes"> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-16 py-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Nos Statistiques</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg2-custom-green p-6  shadow-md text-center"> <!-- Coins arrondis -->
+                <i class="fas fa-users text-4xl text-green-800 mb-4"></i> <!-- Espace en bas de l'icône -->
+                <div class="text-left"> <!-- Aligner le texte à gauche -->
+                    <span class="block text-2xl font-extrabold uppercase text-custom-green">+2000</span> <!-- Texte gras et majuscules -->
+                    <p class="mt-8 text-2xl text-custom-green font-extrabold uppercase">ACHETEURS VÉRIFIÉS</p> <!-- Texte gras et majuscules -->
+                </div>
+            </div>
+            <div class="bg2-custom-green p-6  shadow-md text-center"> <!-- Coins arrondis -->
+                <i class="fas fa-stopwatch text-4xl text-green-800 mb-4"></i> <!-- Espace en bas de l'icône -->
+                <div class="text-left"> <!-- Aligner le texte à gauche -->
+                    <span class="block text-2xl font-extrabold uppercase text-custom-green">1H</span> <!-- Texte gras et majuscules -->
+                    <p class="mt-8 text-2xl text-custom-green font-extrabold uppercase">ÉCONOMISÉE PAR L'ESSAYAGE VIRTUEL</p> <!-- Texte gras et majuscules -->
+                </div>
+            </div>
+            <div class="bg2-custom-green p-6  shadow-md text-center"> <!-- Coins arrondis -->
+                <i class="fas fa-check-circle text-4xl text-green-800 mb-4"></i> <!-- Espace en bas de l'icône -->
+                <div class="text-left"> <!-- Aligner le texte à gauche -->
+                    <span class="block text-2xl font-extrabold uppercase text-custom-green">TOUS</span> <!-- Texte gras et majuscules -->
+                    <p class="mt-8 text-2xl font-extrabold text-custom-green uppercase ">LES AVIS SONT VÉRIFIÉS</p> <!-- Texte gras et majuscules -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container mx-auto px-4 md:px-16 py-16 flex flex-col md:flex-row items-center">
+        <div class="w-full md:w-1/2 mb-8 md:mb-0">
+            <img src="pexelsdiimejii23798862691-4cmb-800h.png" alt="Image de lunettes" class="h-120 max-h-120 mx-auto"> <!-- Responsive image -->
+        </div>
+        <div class="w-full md:w-1/2 pr-0 md:pr-8">
+            <h2 class="text-xl font-bold text-gray-400 mb-4">CE QUE NOUS OFFRONS</h2>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-custom-green uppercase mb-6">Une expérience optique automatisée et intelligente</h1>
+            <p class="text-lg text-gray-600 mb-8 mt-4">
+                Découvrez une plateforme de personnalisation et d'essayage virtuel de lunettes entièrement automatisée. Grâce à notre intelligence artificielle avancée, trouvez la paire parfaite adaptée à votre style, et choisissez directement en ligne.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <ul class="list-disc list-inside">
+                    <li class="flex text-lg items-center text-gray-600 mb-2">
+                        <i class="fas text-custom-green fa-eye mr-2"></i>
+                        Visualisation en temps réel
+                    </li>
+                    <li class="flex text-lg items-center text-gray-600 mb-2">
+                        <i class="fas text-custom-green fa-cube mr-2"></i>
+                        Tests de formes variées
+                    </li>
+                    <li class="flex text-lg items-center text-gray-600 mb-2">
+                        <i class="fas text-custom-green fa-paint-brush mr-2"></i>
+                        Essayez d'autres couleurs
+                    </li>
+                </ul>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li class="flex text-lg items-center mb-2">
+                        <i class="fas text-custom-green fa-star mr-2"></i>
+                        Découvrez votre style
+                    </li>
+                    <li class="flex text-lg items-center text-gray-600 mb-2">
+                        <i class="fas text-custom-green fa-user mr-2"></i>
+                        Ajustement personnalisé
+                    </li>
+                    <li class="flex text-lg items-center text-gray-600 mb-2">
+                        <i class="fas text-custom-green fa-comments mr-2"></i>
+                        Assistance en temps réel
+                    </li>
+                </ul>
+            </div>
+            <h2 class="text-3xl font-bold text-center mb-8 mt-10">Nos Statistiques</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="p-4 text-center">
+                    <span class="block text-4xl font-extrabold text-custom-green">5+ ANS</span>
+                    <p class="mt-2 text-lg font-bold uppercase text-custom-green">D'EXPÉRIENCE</p>
+                </div>
+                <div class="p-4 text-center">
+                    <span class="block text-4xl font-extrabold text-custom-green">30+</span>
+                    <p class="mt-2 text-lg font-bold uppercase text-custom-green">EXPRESS</p>
+                </div>
+                <div class="p-4 text-center">
+                    <span class="block text-4xl font-extrabold text-custom-green">2000+</span>
+                    <p class="mt-2 text-lg font-bold uppercase text-custom-green">CLIENTS SATISFAITS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container mx-auto px-16 py-16">
+        <h2 class="text-m font-bold text-gray-800 mb-2 text-left">CE QUE NOUS OFFRONS</h2>
+        <h3 class="text-3xl font-extrabold text-custom-green uppercase mb-6 text-left">Comment ça fonctionne ?</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg2-custom-green p-6  shadow-md h-60">
+                <i class="fas fa-user-edit text-4xl text-custom-green mb-4"></i>
+                <h4 class="text-xl font-bold mb-2 uppercase text-green-800 text-left ">Personnalisation</h4>
+                <p class="text-left text-green-800 mt-8">La personnalisation est réalisée selon les demandes spécifiques de l'utilisateur, en tenant compte de ses préférences et de la forme de son visage.</p>
+            </div>
+            <div class="bg2-custom-green p-6  shadow-md text">
+                <i class="fas fa-lightbulb text-4xl text-custom-green mb-4"></i>
+                <h4 class="text-xl font-bold mb-2 uppercase text-green-800">Recommandation</h4>
+                <p class="text-left text-green-800 mt-8">Recevez des recommandations intelligentes grâce à notre technologie qui analyse vos besoins et propose les lunettes idéales.</p>
+            </div>
+            <div class="bg2-custom-green p-6  shadow-md">
+                <i class="fas fa-eye text-4xl text-custom-green mb-4"></i>
+                <h4 class="text-xl font-bold mb-2 uppercase text-green-800">Essayage Virtuel</h4>
+                <p class="text-left text-green-800 mt-8">Essayez vos lunettes en temps réel avec notre système d'essayage virtuel assisté par IA.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mx-auto px-16 py-16 relative">
+        <h2 class="text-4xl font-bold text-custom-green mb-8 text-center">NOTRE CATALOGUE</h2>
+        
+        <div class="flex items-center">
+            <button id="prevButton" class="absolute left-0 z-10 bg-white rounded-full shadow-lg p-2 hover:bg-gray-200">
+                <i class="fas fa-chevron-left text-custom-green"></i>
+            </button>
+            <div id="catalog" class="grid grid-cols-1 md:grid-cols-4 gap-8 w-full">
+                <a href="https://peppy-seahorse-d4a6a2.netlify.app/" class="block">
+                    <div class="bg2-custom-green shadow-lg overflow-hidden fade show">
+                        <img src="catalogue22691-jt8d-400w.png" alt="Lunettes en Fibre de Carbone" class="w-full">
+                        <div class="p-4">
+                            <h4 class="text-l text-center font-bold mb-2 text-gray-800">Lunettes en Fibre de Carbone</h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="bg2-custom-green  shadow-lg overflow-hidden fade hidden">
+                    <img src="catalogue22691-jt8d-400w.png" alt="Lunettes en Plastique Recyclé" class="w-full">
+                    <div class="p-4">
+                        <h4 class="text-l text-center font-bold mb-2 text-gray-800">Lunettes en Plastique Recyclé</h4>
+                    </div>
+                </div>
+                <div class="bg2-custom-green  shadow-lg overflow-hidden fade hidden">
+                    <img src="catalogue22691-jt8d-400w.png" alt="Lunettes en Métal à Mémoire" class="w-full">
+                    <div class="p-4">
+                        <h4 class="text-l text-center font-bold mb-2 text-gray-800">Lunettes en Métal à Mémoire</h4>
+                    </div>
+                </div>
+                <div class="bg2-custom-green  shadow-lg overflow-hidden fade hidden">
+                    <img src="catalogue22691-jt8d-400w.png" alt="Lunettes en Acier Inoxydable" class="w-full">
+                    <div class="p-4">
+                        <h4 class="text-l text-center font-bold mb-2 text-gray-800">Lunettes en Acier Inoxydable</h4>
+                    </div>
+                </div>
+                <div class="bg2-custom-green  shadow-lg overflow-hidden fade hidden">
+                    <img src="catalogue22691-jt8d-400w.png" alt="Lunettes en Bois" class="w-full">
+                    <div class="p-4">
+                        <h4 class="text-l text-center font-bold mb-2 text-gray-800">Lunettes en Bois</h4>
+                    </div>
+                </div>
+                <div class="bg2-custom-green  shadow-lg overflow-hidden fade hidden">
+                    <img src="catalogue22691-jt8d-400w.png" alt="Lunettes en Acier Alliés" class="w-full">
+                    <div class="p-4">
+                        <h4 class="text-l text-center font-bold mb-2 text-gray-800">Lunettes en Acier Alliés</h4>
+                    </div>
+                </div>
+                <div class="bg2-custom-green  shadow-lg overflow-hidden fade hidden">
+                    <img src="catalogue22691-jt8d-400w.png" alt="Lunettes de Soleil" class="w-full">
+                    <div class="p-4">
+                        <h4 class="text-l text-center font-bold mb-2 text-gray-800">Lunettes de Soleil</h4>
+                    </div>
+                </div>
+            </div>
+            <button id="nextButton" class="absolute right-0 z-10 bg-white rounded-full shadow-lg p-2 hover:bg-gray-200">
+                <i class="fas fa-chevron-right text-custom-green"></i>
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="container mx-auto px-4 py-16">
+        <div class="bg-white  flex flex-col md:flex-row p-6">
+            <div class="md:w-1/2 md:pl-8">
+                <h2 class="text-m font-bold text-gray-800  uppercase mb-6">personnalisation</h2>
+                <h2 class="text-5xl font-bold text-custom-green mb-16">CRÉEZ VOS LUNETTES SUR-MESURE</h2>
+                <p class="mb-16 text-gray-800 pr-10">Exprimez votre style unique avec notre outil de personnalisation. Choisissez la monture, la couleur, et ajustez votre touche personnelle pour créer une paire de lunettes qui vous ressemble. Design et confort, parfaitement adaptés à vos besoins.</p>
+                <button class="bg-custom-green text-white px-4 py-2  hover:bg-custom-green transition">PERSONNALISER</button>
+            </div>
+            <div class="md:w-1/2 flex flex-col items-center justify-center">
+                <img src="image22691-wzs-300h.png" alt="Lunettes" class="w-full max-w-xs">
+                <img src="image42691-y4m9-200h.png" alt="Lunettes" class="w-full max-w-s">
+            </div>
+            
+        </div>
+    </div>
+
+
+
+
+    <div class="container mx-auto px-16 py-16">
+        <div class="bg-white  flex flex-col md:flex-row p-6">
+            <div class="md:w-1/2 flex items-center h-80 justify-center mb-4 md:mb-0">
+                <img src="eyewears6posterb0a0855da412691-wz2b-700w.png" alt="Lunettes" class="w-90 h-80">
+            </div>
+            <div class="md:w-1/2 md:pl-8">
+                <h2 class="text-m font-bold text-gray-800 ">Faites-nous confiance dès maintenant</h2>
+                <h2 class="text-3xl font-bold text-custom-green mb-4">ESSAYEZ VOS LUNETTES EN RÉALITÉ VIRTUELLE</h2>
+                <p class="mb-4 text-gray-800">Découvrez à quoi ressemblent vos lunettes avant de les acheter ! Grâce à notre outil d'essai virtuel, visualisez vos montures préférées directement sur votre visage en temps réel. Testez différentes formes, couleurs et styles pour trouver la paire parfaite.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <ul class="list-disc list-inside ">
+                        <li class="flex items-center text-custom-green mb-2">
+                            <i class="fas fa-eye mr-2 "></i>
+                            Visualisation en temps réel
+                        </li>
+                        <li class="flex items-center text-custom-green mb-2">
+                            <i class="fas fa-cube mr-2 text-custom-green"></i>
+                            Tests de formes variées
+                        </li>
+                        <li class="flex items-center text-custom-green mb-2">
+                            <i class="fas fa-paint-brush mr-2 text-custom-green"></i>
+                            Essayez d'autres couleurs
+                        </li>
+                    </ul>
+                    <ul class="list-disc list-inside text-custom-green">
+                        <li class="flex items-center mb-2">
+                            <i class="fas fa-star mr-2 text-custom-green mb-2"></i>
+                            Découvrez votre style
+                        </li>
+                        <li class="flex items-center mb-2">
+                            <i class="fas fa-user mr-2 text-custom-green mb-2"></i>
+                            Ajustement personnalisé
+                        </li>
+                        <li class="flex items-center mb-2">
+                            <i class="fas fa-comments mr-2 text-custom-green mb-2"></i>
+                            Assistance en temps réel
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<div class="px-16" id="footer"> <div class="bg2-custom-green h-60 text-white py-6 px-4">
+    <div class="container mx-auto mt-7 text-center">
+        <h1 class="text-5xl font-bold px-32 text-custom-green">CHANGEONS VOTRE PROPRE CONCEPTION DE LUNETTES MAINTENANT</h1>
+        <a href="#contact" class="mt-4 inline-block bg-custom-green text-white font-semibold py-2 px-4 text-left ">CONTACTEZ US</a>
+    </div>
+</div></div>
+   
+
+    <div class=" bg-custom-green mx-auto px-4 py-6 pt-32   grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="  p-6">
+            <h2 class="text-2xl font-bold text-white">INFORMATION</h2>
+            <p class="mt-2 text-white">Découvrez une plateforme de personnalisation et d'essayage virtuel de lunettes entièrement automatisée.</p>
+            <!-- Icônes de réseaux sociaux ici -->
+            <div class="mt-4 flex justify-left space-x-4">
+                <a href="#" class="text-white hover:text-green-800"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white hover:text-green-800"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white hover:text-green-800"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white hover:text-green-800"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="   p-6">
+            <h2 class="text-2xl font-bold text-white">NAVIGATION</h2>
+            <ul class="mt-2">
+                <li class="mb-2"><a href="#" class="text-white hover:text-custom-green"> > ACCUEIL</a></li>
+                <li class="mb-2"><a href="#" class="text-white hover:text-custom-green"> > PRODUITS</a></li>
+                <li class="mb-2"><a href="#" class="text-white hover:text-custom-green">> PERSONNALISATION</a></li>
+                <li class="mb-2"><a href="#" class="text-white hover:text-custom-green">> ESSAYAGE VIRTUEL</a></li>
+            </ul>
+        </div>
+        <div class="  p-6">
+            <h2 class="text-2xl font-bold text-white">CONTACTEZ-NOUS</h2>
+            <div class="mt-2">
+                <p class="flex items-center text-white mb-4">
+                    <i class="fas fa-building mr-2"></i> La Gazelle
+                </p>
+                <p class="flex items-center text-white">
+                    <i class="fas fa-envelope mr-2"></i> contact@tropytic.com
+                </p>
+                
+            </div>
+            <form class="mt-4">
+                <input type="email" placeholder="Votre adresse e-mail" class="border border-gray-300  w-full p-2 mb-2" required>
+                <button type="submit" class="w-full bg-whitee  text-custom-green font-semibold py-2 ">SUBSCRIBE</button>
+            </form>
+        </div>
+    </div>
+    <hr class="pr-16" />
+    <footer class="bg-custom-green text-white py-4 px-16">
+        <div class="container mx-auto flex justify-between items-center">
+            <p class="uppercase">Tous droits réservés - Tropytic</p>
+            <div class="flex space-x-4">
+                <p><a href="#" class="text-white  uppercase">Avertissement</a></p>
+                <p><a href="#" class="text-white  uppercase">Politique de confidentialité</a></p>
+                
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        const catalog = document.getElementById('catalog');
+        const items = catalog.children;
+        let currentIndex = 0;
+        const itemsToShow = 4;
+
+        function updateCatalog() {
+            for (let i = 0; i < items.length; i++) {
+                items[i].classList.remove('show');
+                items[i].classList.add('hidden', 'fade');
+            }
+            for (let i = currentIndex; i < currentIndex + itemsToShow; i++) {
+                if (items[i]) {
+                    items[i].classList.remove('hidden');
+                    setTimeout(() => {
+                        items[i].classList.add('show');
+                    }, 10); // Ajoute une légère temporisation pour activer la transition
+                }
+            }
+        }
+
+        document.getElementById('nextButton').addEventListener('click', () => {
+            if (currentIndex + itemsToShow < items.length) {
+                currentIndex += itemsToShow;
+            }
+            updateCatalog();
+        });
+
+        document.getElementById('prevButton').addEventListener('click', () => {
+            if (currentIndex - itemsToShow >= 0) {
+                currentIndex -= itemsToShow;
+            }
+            updateCatalog();
+        });
+
+        // Initial display
+        updateCatalog();
+    </script>
+
+
+
+
+
+</body>
+</html>

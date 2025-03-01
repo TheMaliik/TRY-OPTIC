@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Lunettes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #acceuil{
+            margin-top: -34px;
+        }
+                #Logo{
+        width: 100px;
+        height: 50px;
+        margin-left:30px ;
+                }
+                .hidden {
+                    display: none;
+                }
+                .fade {
+                    opacity: 0;
+                    transition: opacity 0.5s ease;
+                }
+                .fade.show {
+                    opacity: 1;
+                }
+        
+                .bg-custom-green {
+                    background-color: #2F6B3A;
+                }
+                .text-custom-green {
+                    color: #2F6B3A;
+                }
+        
+                .bg-whitee {
+                    background-color: #ffffff;
+                }
+                .bg2-custom-green {
+                    background-color: #D0EBCA;
+                }
+        
+                #footer{
+                    margin-bottom: -80px;
+                    display: flex;
+                }
+        
+        
+                @media (max-width: 768px) { /* Adjust the breakpoint as needed */
+                .hidden-mobile {
+                    display: none;
+                }
+            }
+        
+        
+                
+            </style>
+</head>
+<body class="bg-white">
+    <nav class="bg-gray-100 p-4">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between">
+                <img src="logo.png" id="Logo" alt="Logo" class="h-8 mb-4 md:mb-0">
+                <div id="nav-links" class="md:flex flex-row justify-end space-x-4 hidden-mobile mr-8">
+                    <a href="#" class="bg-custom-green text-white hover:underline py-10 px-4" id="acceuil">ACCUEIL</a>
+                    <a href="/AboutUs.html" class="text-custom-green hover:underline py-2 px-4">À PROPOS</a>
+                    <a href="#" class="text-custom-green hover:underline py-2 px-4">PERSONNALISATION</a>
+                    <a href="#" class="text-custom-green hover:underline py-2 px-4">ESSAYAGE</a>
+                    <a href="#" class="text-custom-green hover:underline py-2 px-4">GUIDE D'UTILISATION</a>
+                    <a href="#" class="text-custom-green hover:underline py-2 px-4">LANGUE +</a>
+                </div>
+    
+                <!-- Hamburger Icon -->
+                <button id="hamburger" class="md:hidden flex items-center focus:outline-none">
+                    <svg class="w-6 h-6 text-custom-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                   <!-- User Icon -->
+                   <span class="absolute top-20 right-4 text-custom-green text-2xl">
+                    <i class="fas fa-user"></i>
+                </span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Sidebar Menu -->
+    <div id="sidebar" class="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 hidden">
+        <div class="flex flex-col justify-start p-4 bg-white w-64 h-full">
+            <button id="close-sidebar" class="self-end text-gray-600">
+                &times; <!-- Close icon -->
+            </button>
+            <a href="#"  class="block text-custom-green hover:underline py-2">ACCUEIL</a>
+            <a href="/AboutUs.html" class="block text-custom-green hover:underline py-2">À PROPOS</a>
+            <a href="#" class="block text-custom-green hover:underline py-2">PERSONNALISATION</a>
+            <a href="#" class="block text-custom-green hover:underline py-2">ESSAYAGE</a>
+            <a href="#" class="block text-custom-green hover:underline py-2">GUIDE D'UTILISATION</a>
+            <a href="#" class="block text-custom-green hover:underline py-2">LANGUE</a>
+        </div>
+    </div>
+    
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const closeSidebar = document.getElementById('close-sidebar');
+    
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden');
+        });
+    
+        closeSidebar.addEventListener('click', () => {
+            sidebar.classList.add('hidden');
+        });
+    </script>
+
+  <!-- Bannière -->
+     
+  <div class="bg-gray-100 py-8 px-16 flex justify-between items-center px-6">
+    <div class="text-custom-green font-extrabold text-5xl flex items-center text-custom-green">
+        <span class="mr-2  "></span> LE MEILLEUR PRODUIT <br> A VENDRE
+    </div>
+    <div class="text-green-700  ml-8 mb-10 font-bold text-2xl flex items-center text-custom-green">
+        <span class="mr-2  "></span> 40% <br>
+        OFF
+    </div>
+    <img src="../public/assets/20.png" alt="Lunette" class="mx-auto w-80 mr-112  h-40">
+</div>
+<br>
+<br>
+
+<div class="px-16">
+    <h2 class="text-5xl font-extrabold uppercase  text-custom-green mb-4">Détails de produit</h2>
+    <section class="bg-white  px-16  p-6 mx-auto">
+    
+        <img src="../public/assets/14.png" alt="Lunette" class="mx-auto w-120 h-90">
+    <!-- Carte Produit Centrée -->
+
+    
+        <h3 class="text-xl font-bold mt-4">Lunettes de Vue Femme PRADA PR20V 
+        </h3>
+        <p class="text-gray-600 text-sm mt-2">Découvrez les lunettes de vue femme PRADA PR20V, alliant élégance et confort. Leur forme papillon sublime les visages rectangulaires, offrant un style raffiné et intemporel. Conçues pour les femmes modernes, elles incarnent le luxe et l'excellence signée PRADA. Parfaites pour sublimer votre regard avec une touche de sophistication.
+        </p>
+
+        <!-- Boutons -->
+        <div class="flex justify-center ml-64 gap-4 mt-4">
+            <button class="bg-custom-green text-white px-6 py-2  hover:bg-green-700 transition">Acheter</button>
+            <button class="bg-custom-green text-white px-6 py-2  hover:bg-red-600 transition">Annuler</button>
+        </div>
+  
+</section>
+</div>
+    <!-- Section Liste des Lunettes -->
+    
+    
+
+
+
+
+    <!-- Footer -->
+      <!-- Footer -->
+      <div class="px-16" id="footer"> <div class="bg2-custom-green h-60 text-white py-6 px-4">
+        <div class="container mx-auto mt-7 text-center">
+            <h1 class="text-5xl font-bold px-32 uppercase text-custom-green">Découvrez notre collection et trouvez les lunettes parfaites pour votre style !
+            </h1>
+          
+        </div>
+    </div></div>
+       
+    
+        <div class=" bg-custom-green mx-auto px-4 py-6 pt-32   grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="  p-6">
+                <h2 class="text-2xl font-bold text-white">INFORMATION</h2>
+                <p class="mt-2 text-white">Découvrez une plateforme de personnalisation et d'essayage virtuel de lunettes entièrement automatisée.</p>
+                <!-- Icônes de réseaux sociaux ici -->
+                <div class="mt-4 flex justify-left space-x-4">
+                    <a href="#" class="text-white hover:text-green-800"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white hover:text-green-800"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white hover:text-green-800"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white hover:text-green-800"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="   p-6">
+                <h2 class="text-2xl font-bold text-white">NAVIGATION</h2>
+                <ul class="mt-2">
+                    <li class="mb-2"><a href="#" class="text-white hover:text-custom-green"> > ACCUEIL</a></li>
+                    <li class="mb-2"><a href="#" class="text-white hover:text-custom-green"> > PRODUITS</a></li>
+                    <li class="mb-2"><a href="#" class="text-white hover:text-custom-green">> PERSONNALISATION</a></li>
+                    <li class="mb-2"><a href="#" class="text-white hover:text-custom-green">> ESSAYAGE VIRTUEL</a></li>
+                </ul>
+            </div>
+            <div class="  p-6">
+                <h2 class="text-2xl font-bold text-white">CONTACTEZ-NOUS</h2>
+                <div class="mt-2">
+                    <p class="flex items-center text-white mb-4">
+                        <i class="fas fa-building mr-2"></i> La Gazelle
+                    </p>
+                    <p class="flex items-center text-white">
+                        <i class="fas fa-envelope mr-2"></i> contact@tropytic.com
+                    </p>
+                    
+                </div>
+                <form class="mt-4">
+                    <input type="email" placeholder="Votre adresse e-mail" class="border border-gray-300  w-full p-2 mb-2" required>
+                    <button type="submit" class="w-full bg-whitee  text-custom-green font-semibold py-2 ">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+        <hr class="pr-16" />
+        <footer class="bg-custom-green text-white py-4 px-16">
+            <div class="container mx-auto flex justify-between items-center">
+                <p class="uppercase">Tous droits réservés - Tropytic</p>
+                <div class="flex space-x-4">
+                    <p><a href="#" class="text-white  uppercase">Avertissement</a></p>
+                    <p><a href="#" class="text-white  uppercase">Politique de confidentialité</a></p>
+                    
+                </div>
+            </div>
+        </footer>
+
+</body>
+</html>

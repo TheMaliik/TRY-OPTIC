@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue à TryOptic</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white flex flex-col md:flex-row gap-0 rounded-lg shadow-lg overflow-hidden w-full max-w-[1150px] h-auto md:h-[800px]">
+       
+        <div class="w-full md:w-1/2 flex items-center justify-center bg-gray-200">
+            <img src="seconnecter.png" alt="Image de bienvenue" class="w-full h-full object-cover">
+        </div>
+
+
+        <div class="w-full md:w-1/2 flex flex-col items-center justify-center p-2 md:p-4">
+       
+            <img src="scc.png" class="w-[80px] sm:w-[100px] md:w-[120px] h-auto mb-4">
+            <h1 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 text-center">Bienvenue à TryOptic</h1>
+            <h2 class="text-lg sm:text-xl text-gray-600 mb-4 text-center">Connectez-vous à votre compte</h2>
+            <p class="text-sm sm:text-base text-gray-500 mb-6 text-center">Rejoignez la communauté des passionnés de style et de confort
+                visuel</p>
+
+            <form class="space-y-4 w-full">
+                <input type="email" placeholder="Email"
+                    class="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none">
+                <input type="password" placeholder="Mot de passe"
+                    class="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none">
+                    <div class="flex items-center">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"
+                                class="mr-2">
+                            <label for="vehicle1" class="text-sm text-gray-600">Rester connecté</label>
+                        </div>
+                        <b class="text-sm text-green-900 ml-auto">Mot de passe oublié</b>
+                    </div>
+                <button type="submit" class="w-full bg-[#2F6B3A] text-white p-2 sm:p-3 rounded-lg text-sm sm:text-base">
+                    Se connecter
+                </button>
+                <p class="text-sm sm:text-base text-gray-500 mb-6 text-center">
+                    Pas encore inscrit? <a href="s'inscrire.html" class="text-green-900"><b>Créer un compte</b></a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
