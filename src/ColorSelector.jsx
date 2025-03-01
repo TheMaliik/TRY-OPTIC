@@ -11,7 +11,8 @@ function ColorSelector({ selectedColor, onColorChange }) {
       <p className="text-black text-base uppercase tracking-widest ml-3.5 md:ml-2.5">
         Color: {selectedColor || "None"}
       </p>
-      <div className="flex gap-3.5 mt-6 ml-4 md:ml-2.5">
+      {/* <div className="flex gap-3.5 mt-6 ml-4 md:ml-2.5"> */}
+      <div className="flex gap-3.5 mt-6 ml-4 md:ml-2.5 flex-row sm:flex-col sm:items-start">
         {colors.map((color) => (
           <button
             key={color.id}
@@ -25,7 +26,8 @@ function ColorSelector({ selectedColor, onColorChange }) {
             aria-label={`Select color ${color.name}`}
           />
         ))}
-      </div>
+        </div>
+      {/* </div> */}
     </>
   );
 }

@@ -20,6 +20,7 @@ function SizeChart() {
       </tr>
     </thead>
     <tbody>
+        
       <tr>
         <td className="py-2">120 mm</td>
         <td className="py-2">Extra Short</td>
