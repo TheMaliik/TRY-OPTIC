@@ -39,6 +39,7 @@ function ReviewsSection() {
       </h2>
 
       <div className="flex flex-col pt-2 pr-1.5 pb-12 pl-14 mt-12 bg-white border border-solid border-black border-opacity-40 max-md:pl-5 max-md:mt-10 max-md:mr-1.5 max-md:max-w-full">
+      {/* max-h-[400px] overflow-y-auto"> */}
       <a href="#yourTargetSection" className="object-contain self-end aspect-square w-[22px]">
     <img
       src="https://cdn.builder.io/api/v1/image/assets/TEMP/a79cc579b390309f916377586e3ba118a8aac7d8653752ada6b33a71011a130a?placeholderIfAbsent=true&apiKey=cc61361d42154674a2178b590870e82f"
